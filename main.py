@@ -1,6 +1,7 @@
 import pickle
 import requests
 import json
+import unpicklingfunc
 url = "https://newsapi.org/v2/top-headlines?q=cricket&from=2022-07-15&to=2022-07-15&sortBy=popularity&apiKey=a23441b217ed489b8350cf8ca4ba317f"
 text1 = requests.get(url).text
 print(text1)
@@ -16,3 +17,5 @@ for items in articles:
 print(ls)
 pickle.dump(ls, fileobj)
 fileobj.close()
+articles1 = unpicklingfunc.func()
+print(articles1)
